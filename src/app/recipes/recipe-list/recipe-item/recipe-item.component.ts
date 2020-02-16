@@ -7,13 +7,15 @@ import { Recipe } from '../../recipe.model';
     styleUrls: ['./recipe-item.component.scss']
 })
 export class RecipeItemComponent {
+
     @Input() recipe: Recipe;
     @Output() selectedRecipe = new EventEmitter<void>();
 
-
-    fds () {
-        
-    }
     constructor() {
     }
+
+    onSelectRecipe(){
+        this.selectedRecipe.emit();
+    }
+
 }
