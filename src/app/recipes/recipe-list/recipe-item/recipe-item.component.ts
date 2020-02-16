@@ -6,17 +6,14 @@ import { Recipe } from '../../recipe.model';
     templateUrl: './recipe-item.component.html',
     styleUrls: ['./recipe-item.component.scss']
 })
-
 export class RecipeItemComponent {
-
     @Input() recipe: Recipe;
     @Output() selectedRecipe = new EventEmitter<void>();
 
+
+    fds () {
+        
+    }
     constructor() {
     }
-
-    onSelectRecipe(){
-        this.selectedRecipe.emit();
-    }
-
 }
